@@ -1,0 +1,17 @@
+<launch>
+	<node name="gcs_message_handler" pkg="gcs_message_handler" type="gcs_message_handler" output="screen" >
+		<param name="gcs_serial_url" type="string" value="/dev/ttyUSB1" />
+		<param name="fcu_serial_url" type="string" value="/dev/ttyUSB0" />
+		<param name="serial_baud_rate" type="int" value="57600" />
+		<param name="gcs_url" type="string" value="tcp-l://:14551"/>
+                <param name="use_gcs_serial" type="bool" value="false" />
+                <param name="use_fcu_serial" type="bool" value="true" />
+                <param name="use_ip" type="bool" value="true" />
+                <param name="sendAll" type="bool" value="false" />
+                <param name="enable_debug_message" type="bool" value="false" />
+                <param name="print_uplink_ids" type="bool" value="true" />
+                <param name="log_uplink" type="bool" value="false" />
+                <param name="print_downlink_ids" type="bool" value="true" />
+                <param name="log_downlink" type="bool" value="false" />
+	</node>
+</launch>
